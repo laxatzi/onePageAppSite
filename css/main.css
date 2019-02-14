@@ -28,3 +28,6 @@ body {
 #home-section .home-inner {
   padding-top: 150px;   
 }
+#home-section .card-form {
+  opacity: .8;
+}
