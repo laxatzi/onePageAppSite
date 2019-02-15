@@ -281,6 +281,26 @@
 
     // Init scrollspy
     $('body').scrollspy({target: '#main-nav'});
+
+    $('#main-nav a').on('click', function(e) {
+    // check for a hash value
+         if(this.hash !== ""){
+    //prevent default behavior
+          e.preventDefault();
+    // store hash
+          const hash = this.hash;
+    // smooth scrolling
+          $('html, body').animate(
+            {
+            scrollTop: $(hash).offset().top
+          }, 900, 
+      // Add hash to url after scroll
+           function() {
+             window.location.hash = hash;
+           }           
+      );
+         }
+    });
 </script>
 </body>
 </html>
